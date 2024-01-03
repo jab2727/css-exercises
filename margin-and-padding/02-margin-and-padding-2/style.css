@@ -7,21 +7,33 @@ body {
   width: 400px;
   background: #fff;
   margin: 16px auto;
+  padding: 1px;
 }
 
-.title {
+.title, .content, .button-container {
   background: #e3f4ff;
-}
-
-.content {
-  background: #e3f4ff;
-}
-
-.button-container {
-  background: #e3f4ff;
+  margin: 8px;
+  padding: 8px;
+  font-size: 18px;
 }
 
 button {
   background: white;
   border: 1px solid #eee;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  vertical-align: center;
+  display: block;
+  padding: 8px 24px;
+  margin: 0 auto;
+}
+
+.button-container {
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  vertical-align: center;
 }
