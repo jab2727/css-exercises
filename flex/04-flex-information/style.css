@@ -7,9 +7,26 @@ img {
   height: 100px;
 }
 
+.header, .plants, .plant_box {
+  display: flex;  
+}
+
+.plants {
+  justify-content: space-around;
+  padding-top: 32px;
+}
+
+.plant_box {
+  flex-direction:column;
+  max-width: 200px;
+  text-align: center;
+  align-items: center;
+}
+
 .title {
   font-size: 36px;
   font-weight: 900;
+  margin: 0 auto;
 }
 
 /* do not edit this footer */

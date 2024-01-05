@@ -4,16 +4,27 @@ body {
   min-height: 100vh;
 }
 
+.header, .footer {
+  display:flex;
+  margin: 0 auto;
+  align-items: center;
+}
+
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-weight: bolder;
+  font-size: 24px;
+  justify-content: left;
+  padding-left: 10px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  justify-content: center;
 }
 
 .sidebar {
@@ -26,4 +37,26 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  background: white;
+  max-width: 250px;
+  width: auto;
+  margin: 20px;
+}
+
+.sidebar, .cards, .middle {
+  display:flex;
+}
+
+.cards{
+  flex-wrap: wrap;
+}
+
+li, a {
+  text-decoration: none;
+  list-style: none;
+  color:white;
+}
+
+.sidebar, ul {
+  width: 300px;
 }
