@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+#screen {
+    width: 800px;
+    height: 800px;
+    border: 40px;
+    border-style: solid;
+    border-color: coral;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.pixel {
+    background-color: rgb(200, 200, 200);
+    margin: 1px;
+    border-radius: 4px;
+}
+
+.column {
+    display:flex;
+    flex-direction: column;
+}
