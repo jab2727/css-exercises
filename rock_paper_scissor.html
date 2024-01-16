@@ -45,15 +45,12 @@
 
         function checkWinner(userWeapon){
             const computerSelection = getComputerChoice();
-            let battleResults = 0;
             switch(userWeapon){
                 case "Rock":
                     if (computerSelection === "Paper"){
-                        battleResults = -1;
                         results.textContent = "Paper covers your rock.";
                         losses += 1
                     } else if (computerSelection === "Scissor"){
-                        battleResults = 1;
                         results.textContent = "You smashed the scissor.";
                         wins += 1;
                     } else {
@@ -62,11 +59,9 @@
                     break;
                 case "Paper":
                     if (computerSelection === "Rock"){
-                        battleResults = 1;
                         results.textContent = "You smother the rock.";
                         wins += 1;
                     } else if (computerSelection === "Scissor"){
-                        battleResults = -1;
                         results.textContent = "The scissor slices and dices you.";
                         losses += 1
                     } else{
@@ -75,18 +70,24 @@
                     break;
                 case "Scissor":
                     if (computerSelection === "Paper"){
-                        battleResults = 1;
                         results.textContent = "You slice through paper like a hot knife through butter.";
                         wins += 1;
                     } else if (computerSelection === "Rock"){
-                        battleResults = -1;
                         results.textContent = "You get rocked.";
                         losses += 1
                     } else{results.textContent = "You scissor all night long.";}
                     break;
                 }
-            score.textContent = `The score is ${wins} to ${losses}.`;
-            return battleResults;
+            if (wins<5 && losses<5){
+                score.textContent = `The score is ${wins} to ${losses}.`;
+            } else if (wins>4){
+                score.textContent = 'You win!';
+                wins = losses = 0;
+            } else {
+                score.textContent = 'You lose :(';
+                wins = losses = 0;
+            }
+
         }
 
         
