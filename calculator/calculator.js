@@ -12,37 +12,38 @@ let divide = false;
 let equals = false;
 let reset = true;
 
-document.getElementById("1").addEventListener("click", () => {
-    displayNumberCheck("1");}
+document.getElementById("1").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); displayNumberCheck("1");}
 );
-document.getElementById("2").addEventListener("click", () => {
-    displayNumberCheck("2");}
+document.getElementById("2").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); displayNumberCheck("2");}
 );
-document.getElementById("3").addEventListener("click", () => {
-    displayNumberCheck("3");}
+document.getElementById("3").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); displayNumberCheck("3");}
 );
-document.getElementById("4").addEventListener("click", () => {
-    displayNumberCheck("4");}
+document.getElementById("4").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); displayNumberCheck("4");}
 );
-document.getElementById("5").addEventListener("click", () => {
-    displayNumberCheck("5");}
+document.getElementById("5").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); displayNumberCheck("5");}
 );
-document.getElementById("6").addEventListener("click", () => {
-    displayNumberCheck("6");}
+document.getElementById("6").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); displayNumberCheck("6");}
 );
-document.getElementById("7").addEventListener("click", () => {
-    displayNumberCheck("7");}
+document.getElementById("7").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); displayNumberCheck("7");}
 );
-document.getElementById("8").addEventListener("click", () => {
-    displayNumberCheck("8");}
+document.getElementById("8").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); displayNumberCheck("8");}
 );
-document.getElementById("9").addEventListener("click", () => {
-    displayNumberCheck("9");}
+document.getElementById("9").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); displayNumberCheck("9");}
 );
-document.getElementById("0").addEventListener("click", () => {
-    displayNumberCheck("0");}
+document.getElementById("0").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); displayNumberCheck("0");}
 );
-document.getElementById(".").addEventListener("click", () => {
+document.getElementById(".").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); 
     if (!displayNumber.toString().includes('.')){
         decimal = true;
         output.textContent = displayNumber + ".";
@@ -50,43 +51,50 @@ document.getElementById(".").addEventListener("click", () => {
     }
 );
 
-document.getElementById("CLEAR").addEventListener("click", () => {
+document.getElementById("CLEAR").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); 
     displayNumber = 0;
     output.textContent = displayNumber;
     }
 );
-document.getElementById("ALL_CLEAR").addEventListener("click", () => {
+document.getElementById("ALL_CLEAR").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); 
     displayNumber = firstNumber = secondNumber = 0;
     reset = true;
     output.textContent = displayNumber;
     }
 );
 
-document.getElementById("add").addEventListener("click", () => {
+document.getElementById("add").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); 
     functionCheck();
     add = true;
     subtract = multiply = divide = false;
     }
 );  
-document.getElementById("subtract").addEventListener("click", () => {
+document.getElementById("subtract").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); 
     functionCheck();
     subtract = true;
     add = multiply = divide = false;
     }
 ); 
-document.getElementById("multiply").addEventListener("click", () => {
+document.getElementById("multiply").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); 
     functionCheck();
     multiply = true;
     add = subtract = divide = false;
     }
 ); 
-document.getElementById("divide").addEventListener("click", () => {
+document.getElementById("divide").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); 
     functionCheck();
     divide = true;
     add = subtract = multiply = false;
     }
 );   
-document.getElementById("equals").addEventListener("click", () => {
+document.getElementById("equals").addEventListener("contextmenu", (event) => {
+    event.preventDefault(); 
     functionCheck();
     add = subtract = multiply = divide = false;
     }
@@ -171,4 +179,20 @@ function functionCheck(){
     console.log(displayNumber);
     
     console.log("Completed operation loops.")
+}
+
+let c = 0;
+let buttons = document.getElementsByTagName("button");
+output.textContent = '0'
+comments = ["Benjamin is a turd.", "The biggest turd", "A Turdius Maximus", "A Turdasaurus Rex", "The toiled called", 
+            "It said you're late coming home", "Who else is a turd?"];
+
+
+
+for (let button in buttons){
+    buttons[button].addEventListener("click", () => {
+        output.textContent = comments[c];
+        c += 1;
+        if (c==7){c=0;}
+    })
 }
