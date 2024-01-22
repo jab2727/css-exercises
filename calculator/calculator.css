@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+#shell {
+    width: 500px;
+    height: 800px;
+    border: 40px;
+    border-style: solid;
+    border-color: coral;
+    background-color: rgb(253, 183, 158);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+#screen {
+    background-color: rgb(200, 200, 200);
+    border-color: rgb(50,50,50);
+    border-radius: 10px;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#output{
+    text-align: right;
+    font-size: 40px;
+    margin: 0px;
+}
+
+button {
+    width:80px;
+    height:80px;
+    background-color: coral;
+    border-radius: 10px;
+    box-shadow: inset;
+    font-size: xx-large;
+    color: white;
+    box-sizing: 10px;
+}
+
+
+.buttonRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#CLEAR, #ALL_CLEAR {
+    width: 160px;
+}
